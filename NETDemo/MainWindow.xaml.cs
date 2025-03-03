@@ -13,6 +13,7 @@ using System.Windows.Media.Imaging;
 using System.Windows.Navigation;
 using System.Windows.Shapes;
 using WeberLibrary.Windows.Helper;
+using System.Linq.Expressions;
 
 namespace NETDemo
 {

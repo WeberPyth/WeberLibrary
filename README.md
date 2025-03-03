@@ -37,6 +37,12 @@ In the .NET 6.0 + environment, this project was split to 2 packages, named `Webe
 
 ### 功能Functions
 
+#### 对象映射帮助类ObjectMapHelper
+
+Faster than reflection: in In the `NET6.0+` environment, the MapHelper implemented by the expression tree is 10+times faster than the reflection implementation
+
+比反射更快：在`.NET6.0+`环境下，表达式树实现的MapHelper比反射实现快了10+倍
+
 #### 可枚举扩展IEnumableEx
 
 ##### 切块 Chunk By
@@ -90,6 +96,6 @@ bool hasIns = origin.HasIns(target);
 
 注意事项Attention
 
-This extension method is implemented using an expression tree. Therefore, when executing this extension method globally for the first time, it will take an additional few tens of milliseconds to compile the expression tree. After compilation, each subsequent execution of this extension method will be much more efficient than the native method.
+Only `.NET6.0+`：This extension method is implemented using an expression tree. Therefore, when executing this extension method globally for the first time, it will take an additional few tens of milliseconds to compile the expression tree. After compilation, each subsequent execution of this extension method will be much more efficient than the native method.
 
-本扩展方法采用了表达式树实现。因此在全局首次执行本扩展方法时，会额外花费几十毫秒的时间进行一次表达式树编译。在完成编译后，之后的每次执行本扩展方法将会以远超原生方法的效率执行。
+仅限`.NET 6.0+`：本扩展方法采用了表达式树实现。因此在全局首次执行本扩展方法时，会额外花费几十毫秒的时间进行一次表达式树编译。在完成编译后，之后的每次执行本扩展方法将会以远超原生方法的效率执行。

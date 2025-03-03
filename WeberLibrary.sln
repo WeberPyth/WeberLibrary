@@ -13,6 +13,8 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "FrameworkTestConsole", "Fra
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "WeberLibrary.Windows", "WeberLibrary.Windows\WeberLibrary.Windows.csproj", "{CEF508F5-5586-4381-9E94-DEE9594E58BB}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "NETTestConsole", "NETTestConsole\NETTestConsole.csproj", "{8705EAC4-E497-466A-BEED-B6737CA86290}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -61,6 +63,14 @@ Global
 		{CEF508F5-5586-4381-9E94-DEE9594E58BB}.Release|Any CPU.Build.0 = Release|Any CPU
 		{CEF508F5-5586-4381-9E94-DEE9594E58BB}.Release|x64.ActiveCfg = Release|Any CPU
 		{CEF508F5-5586-4381-9E94-DEE9594E58BB}.Release|x64.Build.0 = Release|Any CPU
+		{8705EAC4-E497-466A-BEED-B6737CA86290}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{8705EAC4-E497-466A-BEED-B6737CA86290}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{8705EAC4-E497-466A-BEED-B6737CA86290}.Debug|x64.ActiveCfg = Debug|Any CPU
+		{8705EAC4-E497-466A-BEED-B6737CA86290}.Debug|x64.Build.0 = Debug|Any CPU
+		{8705EAC4-E497-466A-BEED-B6737CA86290}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{8705EAC4-E497-466A-BEED-B6737CA86290}.Release|Any CPU.Build.0 = Release|Any CPU
+		{8705EAC4-E497-466A-BEED-B6737CA86290}.Release|x64.ActiveCfg = Release|Any CPU
+		{8705EAC4-E497-466A-BEED-B6737CA86290}.Release|x64.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

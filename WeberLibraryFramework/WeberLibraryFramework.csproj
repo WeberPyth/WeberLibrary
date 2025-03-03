@@ -7,8 +7,9 @@
     <GenerateDocumentationFile>True</GenerateDocumentationFile>
     <PackageLicenseExpression>MIT</PackageLicenseExpression>
     <Description>包含对象映射，枚举类增强扩展，IEnumable增强扩展，注册表快捷编辑，WMI查询帮助类等一系列工具类。适用Framework</Description>
-    <Version>1.0.5</Version>
+    <Version>1.0.6</Version>
     <Platforms>AnyCPU;x64</Platforms>
+    <PackageProjectUrl>https://github.com/WeberPyth/WeberLibrary</PackageProjectUrl>
   </PropertyGroup>
 
   <ItemGroup>

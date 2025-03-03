@@ -27,6 +27,9 @@ namespace FrameworkTestConsole
             MyEnumType origin = MyEnumType.Alpha | MyEnumType.Beta;
             MyEnumType target = MyEnumType.Beta | MyEnumType.Gamma;
             bool hasIns = origin.HasIns(target);
+            bool hasSubset = origin.HasSubset(target);
+            MyEnumType getIns = origin.GetIns(target);
+            MyEnumType getUnion = origin.GetUnion(target);
         }
     }
 }

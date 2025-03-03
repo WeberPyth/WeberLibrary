@@ -50,7 +50,7 @@ namespace WeberLibrary.Windows.Helper
         /// <param name="path">注册表路径</param>
         /// <param name="key">键</param>
         /// <returns>如果读取失败，返回null</returns>
-        public static T? ReadFromRegistry<T>(string path, string key) where T : class
+        public static T ReadFromRegistry<T>(string path, string key) where T : class
         {
             RegistryKey hkcu = Registry.CurrentUser;
             using (var sw = hkcu.OpenSubKey(path))
@@ -59,7 +59,7 @@ namespace WeberLibrary.Windows.Helper
                 {
                     return null;
                 }
-                object? result = sw.GetValue(key);
+                object result = sw.GetValue(key);
                 return result == null ? null : (T)result;
             }
         }
