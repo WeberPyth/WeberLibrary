@@ -1,0 +1,8 @@
+x64/
+bin/
+obj/
+.vs/
+*.user
+*.exe
+*.nupkg
+*.nuspec
