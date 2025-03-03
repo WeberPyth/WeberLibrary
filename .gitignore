@@ -2,6 +2,7 @@ x64/
 bin/
 obj/
 .vs/
+packages/
 *.user
 *.exe
 *.nupkg
