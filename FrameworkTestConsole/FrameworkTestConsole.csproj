@@ -50,5 +50,11 @@
   <ItemGroup>
     <None Include="App.config" />
   </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\WeberLibraryFramework\WeberLibraryFramework.csproj">
+      <Project>{57f65394-b6c2-4c02-987e-68cd3557852f}</Project>
+      <Name>WeberLibraryFramework</Name>
+    </ProjectReference>
+  </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>
