@@ -162,6 +162,16 @@ namespace WeberLibraryFramework.Helper
         /// </summary>
         public PropertyData SystemName { get => Transform(); }
 
+        /// <summary>
+        /// 
+        /// </summary>
+        public PropertyData AddressWidth { get => Transform(); }
+
+        /// <summary>
+        /// 
+        /// </summary>
+        public PropertyData ProcessorId { get => Transform(); }
+
 
         internal PropertyData Transform(PropertyDataCollection properties, [CallerMemberName] string propertyName = null) 
         {

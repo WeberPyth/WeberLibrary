@@ -34,6 +34,7 @@ namespace NETTestConsole
             MyEnumType origin = MyEnumType.Alpha | MyEnumType.Beta;
             MyEnumType target = MyEnumType.Beta | MyEnumType.Gamma;
 
+            
 
             // Usage: Any usage behavior will trigger the compile
 
@@ -90,9 +91,14 @@ namespace NETTestConsole
             Console.WriteLine($"[Library]ObjectMapHelper: {(DateTime.Now - startTime).TotalMilliseconds}ms");
 
             Console.WriteLine($"{jack.name} {jack.age}");
-            //jack = ObjectMapHelper<Tom, Jack>.MapObj(tom);
 
-
+            string originStr = "Hello, World!";
+            string key = "WeberLibrary";
+            string iv = "Weber";
+            var b64str = AESHelper.Encrypt(originStr, key, iv);
+            var rs = AESHelper.Decrpt(b64str, key, iv);
+            Console.WriteLine(b64str);
+            Console.WriteLine(rs);
 
             Console.ReadLine();
         }

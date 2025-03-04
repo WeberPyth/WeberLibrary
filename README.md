@@ -16,8 +16,10 @@ All Weber Library packages, including `WeberLibrary` `WeberLibrary.Windows` and 
 
 * [概述Resume](#概述Resume)
 * [功能Functions](#功能Functions)
+  * [对象映射帮助类ObjectMapHelper](#对象映射帮助类ObjectMapHelper)
   * [可枚举扩展IEnumableEx](#可枚举扩展IEnumableEx)
   * [枚举类扩展EnumEx](#枚举类扩展EnumEx)
+  * [AES帮助类AESHelper](#AES帮助类AESHelper)
 
 ### 概述Resume
 
@@ -42,6 +44,36 @@ In the .NET 6.0 + environment, this project was split to 2 packages, named `Webe
 Faster than reflection: in In the `NET6.0+` environment, the MapHelper implemented by the expression tree is 10+times faster than the reflection implementation
 
 比反射更快：在`.NET6.0+`环境下，表达式树实现的MapHelper比反射实现快了10+倍
+
+定义Define
+```csharp
+public static TOut MapObj(TIn t)
+```
+
+使用Usage
+```csharp
+
+// class define
+public class Tom 
+{
+    public string name;
+    public int age;
+}
+
+public class Jack
+{
+    public string name;
+    public int age;
+}
+```
+
+```csharp
+var tom = new Tom();
+tom.name = "Tom";
+tom.age = 20;
+Jack jack = new Jack();
+jack = ObjectMapHelper<Tom, Jack>.MapObj(tom);
+```
 
 #### 可枚举扩展IEnumableEx
 
@@ -94,8 +126,79 @@ MyEnumType target = MyEnumType.Beta | MyEnumType.Gamma;
 bool hasIns = origin.HasIns(target);
 ```
 
+
 注意事项Attention
 
 Only `.NET6.0+`：This extension method is implemented using an expression tree. Therefore, when executing this extension method globally for the first time, it will take an additional few tens of milliseconds to compile the expression tree. After compilation, each subsequent execution of this extension method will be much more efficient than the native method.
 
 仅限`.NET 6.0+`：本扩展方法采用了表达式树实现。因此在全局首次执行本扩展方法时，会额外花费几十毫秒的时间进行一次表达式树编译。在完成编译后，之后的每次执行本扩展方法将会以远超原生方法的效率执行。
+
+
+##### 是否为子集 Has Subset
+
+Determine whether the current set has a subset that is the same as the target set
+
+判断目标集合是否为当前集合的子集
+
+定义Define
+```csharp
+public static bool HasSubset<T>(this T o, T t) where T : Enum
+```
+
+使用Usage
+```csharp
+MyEnumType origin = MyEnumType.Alpha | MyEnumType.Beta;
+MyEnumType target = MyEnumType.Beta | MyEnumType.Gamma;
+
+origin.HasSubset(target);
+```
+
+
+注意事项Attention
+
+ditto
+同上
+
+##### 获取交集 Get Intersection
+
+定义Define
+```csharp
+public static T GetIns<T>(this T o, T t) where T : Enum
+```
+
+使用Usage
+```csharp
+MyEnumType origin = MyEnumType.Alpha | MyEnumType.Beta;
+MyEnumType target = MyEnumType.Beta | MyEnumType.Gamma;
+
+var result = origin.GetIns(target);
+```
+
+#### AES帮助类AESHelper
+
+##### 字符串编码为AES String Encrypt || 字符串解码AES String Decrypt
+
+
+定义Define
+```csharp
+public static string Encrypt(string str, string key, string iv)
+```
+```csharp
+public static string Decrypt(string str, string key, string iv)
+```
+
+使用Usage
+```csharp
+string originStr = "Hello, World!";
+string key = "WeberLibrary";
+string iv = "Weber";
+var b64str = AESHelper.Encrypt(originStr, key, iv);
+var rs = AESHelper.Decrpt(b64str, key, iv);
+```
+
+
+注意事项Attention
+
+There are multiple overloads for encryption and decryption functions. You can check it yourself
+
+加密和解密函数存在多种重载。您可自行查阅

@@ -124,6 +124,7 @@ namespace WeberLibrary.Extend
         {
             return EnumExpressionGenericMapper<T, T>.HasIns(o, t);
         }
+
         /// <summary>
         /// 判断目标值是否为原值的子集
         /// </summary>

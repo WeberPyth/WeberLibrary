@@ -6,8 +6,8 @@
     <Nullable>enable</Nullable>
     <GenerateDocumentationFile>True</GenerateDocumentationFile>
     <PackageLicenseExpression>MIT</PackageLicenseExpression>
-    <Description>包含对象映射，枚举类增强扩展，IEnumable增强扩展等一系列工具类</Description>
-    <Version>1.0.6</Version>
+    <Description>包含对象映射，枚举类增强扩展，IEnumable增强扩展，AES加密等一系列工具类</Description>
+    <Version>1.0.7</Version>
     <Platforms>AnyCPU;x64</Platforms>
     <PackageProjectUrl>https://github.com/WeberPyth/WeberLibrary</PackageProjectUrl>
   </PropertyGroup>

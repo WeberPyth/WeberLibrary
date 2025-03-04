@@ -5,6 +5,7 @@ using System.Management;
 using System.Text;
 using System.Threading.Tasks;
 using WeberLibraryFramework.Extend;
+using WeberLibraryFramework.Helper;
 
 namespace FrameworkTestConsole
 {
@@ -19,17 +20,15 @@ namespace FrameworkTestConsole
     {
         static void Main(string[] args)
         {
-            // ChunkBy
-            IEnumerable<int> myList = new List<int> { 1,2,3,4,5,6,7,8,9,10 };
-            var chunkResult = myList.ChunkBy(2);
+            string origin = "Hello, World!";
+            string key = "WeberLibrary";
+            string iv = "Weber";
+            var b64str = AESHelper.Encrypt(origin, key, iv);
+            var rs = AESHelper.Decrpt(b64str, key, iv);
+            Console.WriteLine(b64str);
+            Console.WriteLine(rs);
 
-            // Enum
-            MyEnumType origin = MyEnumType.Alpha | MyEnumType.Beta;
-            MyEnumType target = MyEnumType.Beta | MyEnumType.Gamma;
-            bool hasIns = origin.HasIns(target);
-            bool hasSubset = origin.HasSubset(target);
-            MyEnumType getIns = origin.GetIns(target);
-            MyEnumType getUnion = origin.GetUnion(target);
+            Console.ReadLine();
         }
     }
 }
